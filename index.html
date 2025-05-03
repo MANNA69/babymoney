@@ -1,0 +1,64 @@
+// index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MANNA Trading App (ID: 72379)</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header><h1>MANNA Trading App (ID: 72379)</h1></header>
+
+  <button id="login-btn">Login with Deriv</button>
+  <div id="account-info"></div>
+
+  <div id="trade-panel" style="display:none;">
+    <h2>Trade Setup</h2>
+    <label for="symbol">Select Symbol</label>
+    <select id="symbol">
+      <option value="R_10">Volatility 10</option>
+      <option value="R_10_1s">Volatility 10 (1s)</option>
+      <option value="R_25">Volatility 25</option>
+      <option value="R_50">Volatility 50</option>
+      <option value="R_75">Volatility 75</option>
+      <option value="R_75_1s">Volatility 75 (1s)</option>
+      <option value="R_100">Volatility 100</option>
+      <option value="WLDAUD">Bear Market Index</option>
+      <option value="WLDEUR">Bull Market Index</option>
+    </select>
+
+    <label for="contract">Contract Type</label>
+    <select id="contract">
+      <option value="CALL">Rise</option>
+      <option value="PUT">Fall</option>
+      <option value="EVEN">Even</option>
+      <option value="ODD">Odd</option>
+      <option value="OVER">Over</option>
+      <option value="UNDER">Under</option>
+      <option value="MATCHES">Matches</option>
+      <option value="DIFFERS">Differs</option>
+    </select>
+
+    <label for="duration">Duration (minutes)</label>
+    <input type="number" id="duration" value="1"/>
+
+    <label for="stake">Stake Amount ($)</label>
+    <input type="number" id="stake" value="1"/>
+
+    <button onclick="placeTrade()">Trade</button>
+    <div id="log"></div>
+
+    <div class="admin-section" id="admin-panel" style="display:none;">
+      <h3>Admin Copy Trade</h3>
+      <textarea id="client-tokens" placeholder="Enter one token per line"></textarea>
+      <label><input type="checkbox" id="mirror-stake" /> Same Stake (Mirror)</label>
+      <button onclick="saveTokens()">Save Tokens</button>
+      <button onclick="clearTokens()">Clear Tokens</button>
+      <button onclick="copyTrade()">Send Copy Trade</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

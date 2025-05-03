@@ -1,0 +1,84 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f7fa;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #B78007;
+  color: white;
+  padding: 1em;
+  text-align: center;
+}
+
+button {
+  background-color: #B78007;
+  color: white;
+  border: none;
+  padding: 0.6em 1.2em;
+  margin: 0.5em;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+button:hover {
+  background-color: #a26d06;
+}
+
+#trade-panel {
+  margin: 2em auto;
+  max-width: 600px;
+  background: white;
+  padding: 2em;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+label {
+  display: block;
+  margin-top: 1em;
+  font-weight: bold;
+}
+
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  padding: 0.5em;
+  margin-top: 0.5em;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+textarea {
+  height: 100px;
+}
+
+#log {
+  background: #eef;
+  padding: 1em;
+  margin-top: 1em;
+  border-radius: 4px;
+  font-family: monospace;
+}
+
+.admin-section {
+  margin-top: 2em;
+  padding-top: 1em;
+  border-top: 2px dashed #ccc;
+}
+
+#login-btn {
+  display: block;
+  margin: 2em auto;
+  font-size: 1.2em;
+}
+
+#account-info {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 1em;
+}
